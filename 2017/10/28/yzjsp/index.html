@@ -5,12 +5,16 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="Javascript中的Form表单知识点:在HTML中，表单是由form元素来表示的，但是在javascript中，表单则由HTMLFormElement类型，此元素继承了HTMLElement，因此与其他HTML元素具有相同的默认属性；HTMLFormElement有自己以下属性和方法； acceptCharset: 服务器能够处理的字符集；等价于HTML中的accept-charset特性；">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/10/28/yzjsp/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Javascript中的Form表单知识点:在HTML中，表单是由form元素来表示的，但是在javascript中，表单则由HTMLFormElement类型，此元素继承了HTMLElement，因此与其他HTML元素具有相同的默认属性；HTMLFormElement有自己以下属性和方法； acceptCharset: 服务器能够处理的字符集；等价于HTML中的accept-charset特性；">
+<meta property="og:updated_time" content="2017-10-28T01:22:03.389Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="Javascript中的Form表单知识点:在HTML中，表单是由form元素来表示的，但是在javascript中，表单则由HTMLFormElement类型，此元素继承了HTMLElement，因此与其他HTML元素具有相同的默认属性；HTMLFormElement有自己以下属性和方法； acceptCharset: 服务器能够处理的字符集；等价于HTML中的accept-charset特性；">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -59,9 +63,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-yzjsp" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-yzjsp" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/10/28/yzjsp/" class="article-date">
   <time datetime="2017-10-28T00:37:35.904Z" itemprop="datePublished">2017-10-28</time>
@@ -98,129 +100,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-zyz" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/10/17/zyz/" class="article-date">
-  <time datetime="2017-10-17T03:36:19.719Z" itemprop="datePublished">2017-10-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p> 1.</p>
-<ul>
-<li><p>JavaScript的组成:<br>  完整的JavaScript是由ECMAScript（语法）、<br>  Browser Objects（DOM、BOM）（特性）组成的。<br>  ECMAScript中的一切（变量、函数名和操作符）都区分大小写。<br>2.</p>
-<ul>
-<li>JavaScript的注释与分号<br>// 单行注释<br>/**/ 多行注释<br>语句结束使用分号，如果省略，则由解析器确定语句的<br>结尾。<br>3.</li>
-<li><p>JavaScript的标识符</p>
-<p>1、什么是标识符？</p>
-<p>变量、函数、属性的名字，或者函数的参数。</p>
-<p>2、标识符的命名规则：</p>
-<p>（1）、由字母、数字、下划线（_）或美元符号（$）组<br>成。</p>
-<p>（2）、不能以数字开头。</p>
-<p>（3）、不能使用关键字、保留字等作为标识符。</p>
-</li>
-</ul>
-<ol>
-<li></li>
-</ol>
-<ul>
-<li><p>什么是变量</p>
-<p>ECMAScript的变量是松散类型</p>
-<p>松散类型：可以用来保存任何类型的数据</p>
-<p>换句话说，每个变量仅仅是一个用于保存值的占位符而已。<br>5.</p>
-</li>
-<li><p>变量的声明与赋值</p>
-<p>1、变量声明：</p>
-<p>变量的声明要使用var操作符，</p>
-<p>语法：var 变量名</p>
-<p>2、变量赋值：</p>
-<p>声明的同时赋值：var 变量名=值</p>
-<p>先声明后赋值： 变量名=值<br>说明：</p>
-<p>1、省略var声明的变量是全局变量</p>
-<p>2、不推荐省略var操作符来定义全局变量<br>6.</p>
-</li>
-<li><p>JavaScript的数据类型</p>
-<p>ECMAScript中有5种简单数据类型（也称为基本数据类型）：Undefined、Null、</p>
-<p>Boolean、Number和String。</p>
-<p>还有1种复杂数据类型：Object。<br>7.</p>
-</li>
-<li><p>typeof</p>
-<p>语法：typeof 变量 或 typeof(变量)</p>
-<p>功能：检测变量类型</p>
-<p>返回值：string类型，有可能是：</p>
-<p>string、number、boolean、object、undefined、function</p>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="MarkDown"><a href="#MarkDown" class="headerlink" title="MarkDown"></a>MarkDown</h1><h2 id="链接地址"><a href="#链接地址" class="headerlink" title="链接地址"></a>链接地址</h2><p>[qq] (<a href="http://blog.csdn.net/phunxm/article/details/49565427" target="_blank" rel="external">http://blog.csdn.net/phunxm/article/details/49565427</a>)</p>
+  
+    <a href="/2017/10/17/zyz/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ouder</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/17/zyz/" data-id="cj9dkmxn100021kq4t0y9shgl" class="article-share-link">Delen</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/10/14/hello-world/" class="article-date">
-  <time datetime="2017-10-14T01:15:37.797Z" itemprop="datePublished">2017-10-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/14/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/14/hello-world/" data-id="cj9dkmxn100011kq49qofjtjf" class="article-share-link">Delen</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 </section>
         
