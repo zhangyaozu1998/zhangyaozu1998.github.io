@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>字段访问 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="如何访问表单字段？ 第一种方式我们可以使用dom节点来访问； 第二种方式：每个表单都有elements属性，该属性是表单中所有表单元素的集合；这个elements是个有序列表；包含着所有字段，比如有input,textarea,button,fieldset等； 比如如下HTML代码： 复制代码                 111    复制代码JS获取表单字段如下： 复制代码var form">
+<meta property="og:type" content="article">
+<meta property="og:title" content="字段访问">
+<meta property="og:url" content="http://yoursite.com/2017/11/04/zhang/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="如何访问表单字段？ 第一种方式我们可以使用dom节点来访问； 第二种方式：每个表单都有elements属性，该属性是表单中所有表单元素的集合；这个elements是个有序列表；包含着所有字段，比如有input,textarea,button,fieldset等； 比如如下HTML代码： 复制代码                 111    复制代码JS获取表单字段如下： 复制代码var form">
+<meta property="og:updated_time" content="2017-11-04T02:14:37.328Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="字段访问">
+<meta name="twitter:description" content="如何访问表单字段？ 第一种方式我们可以使用dom节点来访问； 第二种方式：每个表单都有elements属性，该属性是表单中所有表单元素的集合；这个elements是个有序列表；包含着所有字段，比如有input,textarea,button,fieldset等； 比如如下HTML代码： 复制代码                 111    复制代码JS获取表单字段如下： 复制代码var form">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-zhang" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/04/zhang/" class="article-date">
+  <time datetime="2017-11-04T02:16:42.160Z" itemprop="datePublished">2017-11-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      字段访问
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>如何访问表单字段？</p>
+<p>第一种方式我们可以使用dom节点来访问；</p>
+<p>第二种方式：每个表单都有elements属性，该属性是表单中所有表单元素的集合；这个elements是个有序列表；包含着所有字段，比如有input,textarea,button,fieldset等；</p>
+<p>比如如下HTML代码：</p>
+<p>复制代码</p>
+<p><form id="form" name="form1" action="http://www.baidu.com"><br>    <input type="text" name="input1"><br>    <select name="select1"><br>        <option>111</option><br>    </select><br></form><br>复制代码<br>JS获取表单字段如下：</p>
+<p>复制代码<br>var formId = document.getElementById(“form”);<br>// 取得表单中的第一个字段<br>var firstCol = formId.elements[0];<br>console.log(firstCol);<br>// 取得名字name为select1的字段<br>console.log(formId.elements[‘select1’]);<br>// 取得表单中包含字段的数量<br>console.log(formId.elements.length);<br>复制代码<br>如果一个表单中，有多个name相同的属性，那么取得数据是一个集合，如下HTML代码：</p>
+<p><form id="form" name="form1" action="http://www.baidu.com"><br>    <input type="radio" name="radio2"><br>    <input type="radio" name="radio2"><br>    <input type="radio" name="radio2"><br></form><br>JS代码如下：</p>
+<p>var formId = document.getElementById(“form”);<br>var radios = formId.elements[“radio2”];<br>console.log(radios.length);  // 打印3<br>共有的表单字段属性</p>
+<p>所有的表单字段都有一组相同的属性；表单共有的属性如下：</p>
+<p>disabled: 布尔值，表示当前字段是否被禁用；</p>
+<p>form: 指向当前字段所属表单的指针，只读；</p>
+<p>name: 当前字段的名称;</p>
+<p>readOnly:布尔值，表示当前字段是否可读。</p>
+<p>tabIndex: 表示当前字段的切换(tab)序号。</p>
+<p>type: 当前字段的类型，如checkbox,radio等；</p>
+<p>value: 当前字段被提交到服务器的值；</p>
+<p>共有的表单字段方法</p>
+<p>每个表单字段都有两个方法focus()和blur()，其中focus是获取焦点；比如在页面加载完成后，我希望form表单中的第一个字段获取焦点（除隐藏域之外）；如下代码：</p>
+<p><form id="form" name="form1" action="http://www.baidu.com"><br>    <input type="text" name="radio2"><br>    <input type="text" name="radio2"><br>    <input type="text" name="radio2"><br></form><br>JS代码如下：</p>
+<p>var formId = document.getElementById(“form”);<br>EventUtil.addHandler(window,’load’,function(event){<br>    formId.elements[0].focus();<br>});<br>但是HTML5中为表单字段新增了一个autofocus属性，在支持这个属性浏览器中，如果设置了这个属性，不用javascript就能将焦点移动到某个输入框下，比如如下HTML代码，在页面加载完成后，我把焦点放在第二个输入框内，如下HTML代码：</p>
+<p><form id="form" name="form1" action="http://www.baidu.com"><br>    <input type="text" name="radio2"><br>    <input type="text" name="radio2" autofocus><br>    <input type="text" name="radio2"><br></form><br>支持autofocus属性的浏览器有：firefox4+，safari5+，chrome和Opera9.6+</p>
+<p>但是我想要兼容其他不支持autofocus的浏览器，我们可以写一段JS，为了全兼容；</p>
+<p>复制代码<br>var formId = document.getElementById(“form”);<br>EventUtil.addHandler(window,’load’,function(event){<br>    var element = formId.elements[1];<br>    if(element.autofocus !== true) {<br>        element.focus();<br>    }<br>});<br>复制代码<br>因为autofocus是一个布尔值，支持他的浏览器默认为true；不支持他的浏览器，默认值为空字符串；</p>
+<p>共有的表单字段事件</p>
+<p>所有的表单字段都支持以下三个事件；</p>
+<p>blur:当前字段失去焦点时触发；</p>
+<p>change:对于input和textarea元素，值发生改变的时候触发；</p>
+<p>focus: 当前字段获得焦点时触发；</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/04/zhang/" data-id="cj9kpgide0002twq4oti524vn" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/10/30/张耀祖/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">张耀祖</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/11/04/zhang/">字段访问</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/30/张耀祖/">张耀祖</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/28/yzjsp/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/17/zyz/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/14/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
